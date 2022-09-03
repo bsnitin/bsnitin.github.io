@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/sample/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/chalkboard/readme/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/chart/readme/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/customcontrols/readme/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/menu/contributing/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/menu/readme/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/sample/plugin/notes/speaker-view/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/</loc>
+  </url><url>
+    <loc>/tags/</loc>
+  </url>
+</urlset>
