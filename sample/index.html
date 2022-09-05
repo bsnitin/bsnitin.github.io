@@ -1,656 +1,464 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<html lang="en" dir="auto">
 
-    <title></title>
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
-    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
-	<link rel="stylesheet" href="css/layout.css" />
-	<link rel="stylesheet" href="plugin/customcontrols/style.css">
-
-
-    <script defer src="dist/fontawesome/all.min.js"></script>
-
-	<script type="text/javascript">
-		var forgetPop = true;
-		function onPopState(event) {
-			if(forgetPop){
-				forgetPop = false;
-			} else {
-				parent.postMessage(event.target.location.href, "app://obsidian.md");
-			}
-        }
-		window.onpopstate = onPopState;
-		window.onmessage = event => {
-			if(event.data == "reload"){
-				window.document.location.reload();
-			}
-			forgetPop = true;
-		}
-
-		function fitElements(){
-			const itemsToFit = document.getElementsByClassName('fitText');
-			for (const item in itemsToFit) {
-				if (Object.hasOwnProperty.call(itemsToFit, item)) {
-					var element = itemsToFit[item];
-					fitElement(element,1, 1000);
-					element.classList.remove('fitText');
-				}
-			}
-		}
-
-		function fitElement(element, start, end){
-
-			let size = (end + start) / 2;
-			element.style.fontSize = `${size}px`;
-
-			if(Math.abs(start - end) < 1){
-				while(element.scrollHeight > element.offsetHeight){
-					size--;
-					element.style.fontSize = `${size}px`;
-				}
-				return;
-			}
-
-			if(element.scrollHeight > element.offsetHeight){
-				fitElement(element, start, size);
-			} else {
-				fitElement(element, size, end);
-			}		
-		}
-
-
-		document.onreadystatechange = () => {
-			fitElements();
-			if (document.readyState === 'complete') {
-				if (window.location.href.indexOf("?export") != -1){
-					parent.postMessage(event.target.location.href, "app://obsidian.md");
-				}
-				if (window.location.href.indexOf("print-pdf") != -1){
-					let stateCheck = setInterval(() => {
-						clearInterval(stateCheck);
-						window.print();
-					}, 250);
-				}
-			}
-	};
-
-
-        </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-#### Hello from Cover Page
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-*This text will be italic*
-
-_This will also be italic_
-
-**This text will be bold**
-
-**This will also be bold**
-
-
-
-_You **can** combine them_
-</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
-
-Any word wrapped with two equal signs (like <mark>this</mark>) will appear as highlighted.
-</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="Hello from Cover Page This text will be italic
+This will also be italic
+This text will be bold
+This will also be bold
+%%This is a Comment(Can&rsquo;t see it)%%
+You can combine them
+Any word wrapped with two tildes (like this) will appear crossed out.
+Any word wrapped with two equal signs (like ==this==) will appear as highlighted.
+&ndash;
 Slide 2.1
-</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+Item 1 Item 2 Item 2a Item 2b Item 1 Item 2 Item 3 Item 3a Item 3b Insert image with standard markdown syntax">
+<meta name="author" content="">
+<link rel="canonical" href="/sample/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3299c596a7007118365635c056dd427dace22b7b8c1341fdef6fa6c31359ba10.css" integrity="sha256-MpnFlqcAcRg2VjXAVt1CfaziK3uME0H972&#43;mwxNZuhA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="mask-icon" href="safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="/sample/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-- Item 1
-- Item 2
-	- Item 2a
-	- Item 2b
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+            .list {
+                background: var(--theme);
+            }
 
-Insert image with standard markdown syntax
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-<img src="https://picsum.photos/id/1006/500/300" alt="Image" style="object-fit: scale-down">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-Scale image to a width of 100 px
+    </style>
+</noscript><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/sample/" />
 
-<img src="https://picsum.photos/id/1006/500/300" alt="Image|100" style="width: 100px; object-fit: fill">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Scale image to a width of 300x100 px
-
-<img src="https://picsum.photos/id/1006/500/300" alt="Image|300x100" style="object-fit: fill; width: 300px; height: 100px">
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-External Links
-
-http://obsidian.md - automatic!
-
-[Obsidian](http://obsidian.md)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Obsidian URI links
-
-[Link to note](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)
-
-[Link to note](obsidian://open?vault=MainVault&file=MyNote.md)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" id="InternalLinks" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Internal Links
-
-This Internal link will be displayed as normal text
-
-This Link will use its alias for displaying
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Slide Links
-
-You can link between slides, [like this](#/2/2).
-
-Or by slide id, [like this](#InternalLinks).
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-> Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.
-
-\- Doug Engelbart, 1961
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-### Text inside `backticks` on a line will be formatted like code.
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-First Header | Second Header
------------- | ------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-```js [1-2|3|4]
-    let a = 1;
-    let b = 2;
-    let c = x => 1 + 2 + x;
-    c(3);
-```
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Here's a simple footnote<sup id="fnref:1" role="doc-noteref">1</sup>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "/sample/"
+    }
+  ]
+}
+</script>
+</head>
 
-<div class="footnotes" role="doc-endnotes">
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<div class="post-content"><h4 id="hello-from-cover-page">Hello from Cover Page<a hidden class="anchor" aria-hidden="true" href="#hello-from-cover-page">#</a></h4>
+<hr>
+<p><em>This text will be italic</em></p>
+<p><em>This will also be italic</em></p>
+<p><strong>This text will be bold</strong></p>
+<p><strong>This will also be bold</strong></p>
+<p>%%This is a Comment(Can&rsquo;t see it)%%</p>
+<p><em>You <strong>can</strong> combine them</em></p>
+<hr>
+<p>Any word wrapped with two tildes (like <del>this</del>) will appear crossed out.</p>
+<p>Any word wrapped with two equal signs (like ==this==) will appear as highlighted.</p>
+<p>&ndash;</p>
+<p>Slide 2.1</p>
+<hr>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 2a</li>
+<li>Item 2b</li>
+</ul>
+</li>
+</ul>
+<hr>
 <ol>
-<li id="fn:1" role="doc-endnote" class="footnote"><p>
-
-meaningful!
-
-</p></li></ol>
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-`$$\begin{vmatrix}a & b\\
-c & d
-\end{vmatrix}=ad-bc$$`
-
-You can also do inline math like `$s^{-2}_{n}\sum_{i=1}^{n}$`
-</div></script></section><section  data-markdown><script type="text/template"></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-theme: beige
-highlightTheme: css/vs2015.css
-
-\----
-
-
-<div class="mermaid">
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    John-->>-Alice: I feel great!
-
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="callout callout-color2">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-fire-alt" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-This tip has a custom Header
-
-</div>
-</div>
-<div class="callout-content">
-
-This is an Tip with a custom Title
-
-</div>
-</div>
-<!-- .element: style="width: 40%" -->
-
-<div class="callout callout-color5">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-exclamation-triangle" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-Warning
-
-</div>
-</div>
-<div class="callout-content">
-
-This warning is aligned left
-
-</div>
-</div>
-<!-- .element: style="width: 20%; font-size: 24px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
-
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ol>
+<li>Item 3a</li>
+<li>Item 3b</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>Insert image with standard markdown syntax</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1006/500/300" alt="Image"  />
+</p>
+<hr>
+<p>Scale image to a width of 100 px</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1006/500/300" alt="Image|100"  />
+</p>
+<hr>
+<p>Scale image to a width of 300x100 px</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1006/500/300" alt="Image|300x100"  />
+ <!-- element style="object-fit: cover" --></p>
+<hr>
+<p>External Links</p>
+<p><a href="http://obsidian.md">http://obsidian.md</a> - automatic!</p>
+<p><a href="http://obsidian.md">Obsidian</a></p>
+<hr>
+<p>Obsidian URI links</p>
+<p><a href="obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md">Link to note</a></p>
+<p><a href="obsidian://open?vault=MainVault&amp;file=MyNote.md">Link to note</a></p>
+<hr>
+<!-- .slide: id="InternalLinks" -->
+<p>Internal Links</p>
+<p>This [[Internal link]] will be displayed as normal text</p>
+<p>This [[Internal link|Link]] will use its alias for displaying</p>
+<hr>
+<p>Slide Links</p>
+<p>You can link between slides, <a href="#/2/2">like this</a>.</p>
+<p>Or by slide id, <a href="#InternalLinks">like this</a>.</p>
+<hr>
+<blockquote>
+<p>Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.</p>
+</blockquote>
+<p>- Doug Engelbart, 1961</p>
+<hr>
+<h3 id="text-inside-backticks-on-a-line-will-be-formatted-like-code">Text inside <code>backticks</code> on a line will be formatted like code.<a hidden class="anchor" aria-hidden="true" href="#text-inside-backticks-on-a-line-will-be-formatted-like-code">#</a></h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content from cell 1</td>
+<td>Content from cell 2</td>
+</tr>
+<tr>
+<td>Content in the first column</td>
+<td>Content in the second column</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div><hr>
+<p>Here&rsquo;s a simple footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<hr>
+<p>$$\begin{vmatrix}a &amp; b\
+c &amp; d
+\end{vmatrix}=ad-bc$$</p>
+<p>You can also do inline math like $s^{-2}<em>{n}\sum</em>{i=1}^{n}$</p>
+<hr>
+<hr>
+<p>theme: beige
+highlightTheme: css/vs2015.css</p>
+<p>-&mdash;</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    Alice-&gt;&gt;+John: John, can you hear me?
+    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+    John--&gt;&gt;-Alice: I feel great!
+</code></pre><hr>
+<blockquote>
+<p>[!tip] This tip has a custom Header
+This is an Tip with a custom Title</p>
+</blockquote>
+<!-- element style="width:40%"-->
+<blockquote>
+<p>[!warning] 
+This warning is aligned left</p>
+</blockquote>
+<!-- element style="width:20%;font-size:24px" align="left"-->
 <br>
-<div class="callout callout-color7">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-bolt" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-Error
-
-</div>
-</div>
-<div class="callout-content">
-
-Callouts support manipulation through annotations
-
-</div>
-</div>
-<!-- .element: style="width: 20%; font-size: 24px; transform: rotate(15deg)" -->
-
-<div class="" style="font-size: 36px; position: absolute; left: 11%; top: 68%; height: 30%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-<div class="callout callout-color8">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-Example
-
-</div>
-</div>
-<div class="callout-content">
-
-Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
-
-</div>
-</div>
-</div>
-
-<div class="has-light-background" style="font-size: 36px; background-color: white; padding: 50px; box-sizing: border-box; position: absolute; left: 50%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-<div class="callout callout-color8">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-Example
-
-</div>
-</div>
-<div class="callout-content">
-
-Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
-
-</div>
-</div>
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="has-light-background" style="font-size: 36px; background-color: white; padding: 20px; box-sizing: border-box" >
-
-<div class="callout callout-color8">
-<div class="callout-title">
-<div class="callout-icon">
-
-<i class="fas fa-list" ></i>
-
-</div>
-<div class="callout-title-inner">
-
-Example
-
-</div>
-</div>
-<div class="callout-content">
-
-Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
-
-</div>
-</div>
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-text with border <!-- .element: class="with-border" -->
-
-text with background <!-- .element: style="background: blue" -->
-
-text with attribute <!-- .element: data-toggle="modal" -->
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: style="background-color: coral" class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Header with coral background color
-
-Paragraph has coral background color, too!
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: style="background-color: green" class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-- All Bullet points
-- have green
-- background color
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<div class="block">
-
-#### Header
-_and_
+> [!error] 
+> Callouts support manipulation through annotations
+<!-- element style="width:20%;font-size:24px" rotate="15"-->
+<grid drag="30 30" drop="11 68" style="font-size:36px">
+> [!example]
+> Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
+</grid>
+<grid drag="50 100" drop="50 0" bg="white" pad="50px" style="font-size:36px">
+> [!example]
+> Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
+</grid>
+---
+<grid bg="white" pad="20px" style="font-size:36px">
+> [!example]
+> Here is an Example for an Callout in a Slide. Callouts support dark and white backgrounds and could be sized by annotations
+</grid>
+---
+<p>text with border <!-- element class="with-border"--></p>
+<p>text with background <!-- element style="background:blue" --></p>
+<p>text with attribute <!-- element data-toggle="modal" --></p>
+<hr>
+<!-- .slide: style="background-color: coral;" -->
+<h1 id="header-with-coral-background-color">Header with coral background color<a hidden class="anchor" aria-hidden="true" href="#header-with-coral-background-color">#</a></h1>
+<p>Paragraph has coral background color, too!</p>
+<hr>
+<!-- .slide: style="background-color: green;" -->
+<ul>
+<li>All Bullet points</li>
+<li>have green</li>
+<li>background color</li>
+</ul>
+<hr>
+<p>::: block</p>
+<h4 id="header">Header<a hidden class="anchor" aria-hidden="true" href="#header">#</a></h4>
+<p><em>and</em>
 Paragraph content
-*in same block*
-
-</div>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-no color
-
-<div class="block">
-
-<!-- .element: style="background-color: red" -->
-
-everything inside this block has red background color
-
-<div class="block">
-
-<!-- .element: style="background-color: blue" -->
-
-blue
-
-</div>
-
-
-
-red
-
-</div>
-
-
-
-no color
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-Fade in <!-- .element: class="fragment" -->
-
-Fade out <!-- .element: class="fragment fade-out" -->
-
-Highlight red <!-- .element: class="fragment highlight-red" -->
-
-Fade in, then out <!-- .element: class="fragment fade-in-then-out" -->
-
-Slide up while fading in <!-- .element: class="fragment fade-up" -->
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-- Permanent item
-- Appear Fourth <!-- .element: class="fragment" data-fragment-index="4" -->
-- Appear Third <!-- .element: class="fragment" data-fragment-index="5" -->
-- Appear Second <!-- .element: class="fragment" data-fragment-index="2" -->
-- Appear First <!-- .element: class="fragment" data-fragment-index="1" -->
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<em>in same block</em></p>
+<p>:::</p>
+<hr>
+<p>no color</p>
+<p>::: block <!-- element style="background-color: red;" --></p>
+<p>everything inside this block has red background color</p>
+<p>::: block <!-- element style="background-color: blue;" --></p>
+<p>blue</p>
+<p>:::</p>
+<p>red</p>
+<p>:::</p>
+<p>no color</p>
+<hr>
+<p>Fade in <!-- element class="fragment" --></p>
+<p>Fade out <!-- element class="fragment fade-out" --></p>
+<p>Highlight red <!-- element class="fragment highlight-red" --></p>
+<p>Fade in, then out <!-- element class="fragment fade-in-then-out" --></p>
+<p>Slide up while fading in <!-- element class="fragment fade-up" --></p>
+<hr>
+<ul>
+<li>Permanent item</li>
+<li>Appear Fourth <!-- element class="fragment" data-fragment-index="4" --></li>
+<li>Appear Third <!-- element class="fragment" data-fragment-index="5" --></li>
+<li>Appear Second <!-- element class="fragment" data-fragment-index="2" --></li>
+<li>Appear First <!-- element class="fragment" data-fragment-index="1" --></li>
+</ul>
+<hr>
 <style>
 	.with-border{
 		border: 1px solid red;
 	}
 </style>
-
-styled text <!-- .element: class="with-border" -->
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-light-background drop" data-background-color="aquamarine" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with text based background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="#ff0000" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with hex based background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="rgb(70, 70, 255)" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with rgb based background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="hsla(315, 100%, 50%, 1)" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with hsl based background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Slide without background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="https://picsum.photos/seed/picsum/800/600" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with image background
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="image.jpg" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## Slide with image background #2
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-opacity="0.5" data-background-image="https://picsum.photos/seed/picsum/800/600" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## with opacity
-
-0.5 ≙ 50% opacity
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## More options:
-
-See [reveal backgrounds](https://revealjs.com/backgrounds/)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-## My Slide
-
-This is part of my Presentation
-</div>
-
-<aside class="notes"><p>this is not! Only the speaker might see this text.</p>
+<p>styled text <!-- element class="with-border" --></p>
+<hr>
+<!-- slide bg="aquamarine" -->
+<h2 id="slide-with-text-based-background">Slide with text based background<a hidden class="anchor" aria-hidden="true" href="#slide-with-text-based-background">#</a></h2>
+<hr>
+<!-- slide bg="#ff0000" -->
+<h2 id="slide-with-hex-based-background">Slide with hex based background<a hidden class="anchor" aria-hidden="true" href="#slide-with-hex-based-background">#</a></h2>
+<hr>
+<!-- slide bg="rgb(70, 70, 255)" -->
+<h2 id="slide-with-rgb-based-background">Slide with rgb based background<a hidden class="anchor" aria-hidden="true" href="#slide-with-rgb-based-background">#</a></h2>
+<hr>
+<!-- slide bg="hsla(315, 100%, 50%, 1)" -->
+<h2 id="slide-with-hsl-based-background">Slide with hsl based background<a hidden class="anchor" aria-hidden="true" href="#slide-with-hsl-based-background">#</a></h2>
+<hr>
+<h1 id="slide-without-background">Slide without background<a hidden class="anchor" aria-hidden="true" href="#slide-without-background">#</a></h1>
+<hr>
+<!-- slide bg="https://picsum.photos/seed/picsum/800/600" -->
+<h2 id="slide-with-image-background">Slide with image background<a hidden class="anchor" aria-hidden="true" href="#slide-with-image-background">#</a></h2>
+<hr>
+<!-- slide bg="[[image.jpg]]" -->
+<h2 id="slide-with-image-background-2">Slide with image background #2<a hidden class="anchor" aria-hidden="true" href="#slide-with-image-background-2">#</a></h2>
+<hr>
+<!-- slide bg="https://picsum.photos/seed/picsum/800/600" data-background-opacity="0.5" -->
+<h2 id="with-opacity">with opacity<a hidden class="anchor" aria-hidden="true" href="#with-opacity">#</a></h2>
+<p>0.5 ≙ 50% opacity</p>
+<hr>
+<h2 id="more-options">More options:<a hidden class="anchor" aria-hidden="true" href="#more-options">#</a></h2>
+<p>See <a href="https://revealjs.com/backgrounds/">reveal backgrounds</a></p>
+<hr>
+<h2 id="my-slide">My Slide<a hidden class="anchor" aria-hidden="true" href="#my-slide">#</a></h2>
+<p>This is part of my Presentation</p>
+<hr>
+<h1 id="unordered-list">Unordered list<a hidden class="anchor" aria-hidden="true" href="#unordered-list">#</a></h1>
 <ul>
-<li>and this bulletpoint</li>
-<li>or this picture</li>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
 </ul>
-<img src="https://picsum.photos/id/1005/250/250" alt="" style="object-fit: scale-down"></aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Unordered list
-
-- First
-- Second
-- Third
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Fragmented unordered list
-
-- Permanent
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->First
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Third
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Second
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Ordered list
-
-1. First
-2. Second
-3. Third
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Fragmented ordered list
-
-1. Permanent
-1. &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Second
-1. &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Third
-1. &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Fourth
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-light-background drop" data-background-color="white" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-<i class="fab fa-font-awesome fa-4x" ></i>
-
-## Icons
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-light-background drop" data-background-color="white" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-### Basic Syntax
-
-<i class="fas fa-envelope fa-4x" color="coral"></i>
-
-Short Syntax
-
-	![](fas fa-envelope fa-4x)<!-- .element: color="coral" -->
-
-HTML Synthax
-
- 	<i color="coral" class="fas fa-envelope fa-4x"></i>
-
-ShortCode Synthax
-
-	![](fas fa-envelope)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Sizing
-
-<i class="fas fa-camera fa-xs"></i>
+<hr>
+<h1 id="fragmented-unordered-list">Fragmented unordered list<a hidden class="anchor" aria-hidden="true" href="#fragmented-unordered-list">#</a></h1>
+<ul>
+<li>Permanent</li>
+</ul>
+<ul>
+<li>First</li>
+<li>Third</li>
+<li>Second</li>
+</ul>
+<hr>
+<h1 id="ordered-list">Ordered list<a hidden class="anchor" aria-hidden="true" href="#ordered-list">#</a></h1>
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ol>
+<hr>
+<h1 id="fragmented-ordered-list">Fragmented ordered list<a hidden class="anchor" aria-hidden="true" href="#fragmented-ordered-list">#</a></h1>
+<ol>
+<li>Permanent</li>
+</ol>
+<ol start="3">
+<li>Second</li>
+<li>Third</li>
+<li>Fourth</li>
+</ol>
+<hr>
+<!-- .slide: bg="white"-->
+<p>![](fab fa-font-awesome fa-4x)</p>
+<h2 id="icons">Icons<a hidden class="anchor" aria-hidden="true" href="#icons">#</a></h2>
+<hr>
+<!-- .slide: bg="white"-->
+<h3 id="basic-syntax">Basic Syntax<a hidden class="anchor" aria-hidden="true" href="#basic-syntax">#</a></h3>
+<p>![](fas fa-envelope fa-4x)<!-- .element: color="coral"--></p>
+<p>Short Syntax</p>
+<pre><code>![](fas fa-envelope fa-4x)&lt;!-- .element: color=&quot;coral&quot;--&gt;
+</code></pre>
+<p>HTML Synthax</p>
+<pre><code>&lt;i color=&quot;coral&quot; class=&quot;fas fa-envelope fa-4x&quot;/&gt;
+</code></pre>
+<p>ShortCode Synthax</p>
+<pre><code>:fas_envelope:
+</code></pre>
+<hr>
+<h1 id="sizing">Sizing<a hidden class="anchor" aria-hidden="true" href="#sizing">#</a></h1>
+<p><i class="fas fa-camera fa-xs"></i>
 <i class="fas fa-camera fa-sm"></i>
 <i class="fas fa-camera fa-lg"></i>
 <i class="fas fa-camera fa-2x"></i>
 <i class="fas fa-camera fa-3x"></i>
 <i class="fas fa-camera fa-5x"></i>
-<i class="fas fa-camera fa-7x"></i>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Rotating Icons
-
-<i class="fas fa-snowboarding"></i>
+<i class="fas fa-camera fa-7x"></i></p>
+<hr>
+<h1 id="rotating-icons">Rotating Icons<a hidden class="anchor" aria-hidden="true" href="#rotating-icons">#</a></h1>
+<p><i class="fas fa-snowboarding"></i>
 <i class="fas fa-snowboarding fa-rotate-90"></i>
 <i class="fas fa-snowboarding fa-rotate-180"></i>
 <i class="fas fa-snowboarding fa-rotate-270"></i>
 <i class="fas fa-snowboarding fa-flip-horizontal"></i>
 <i class="fas fa-snowboarding fa-flip-vertical"></i>
-<i class="fas fa-snowboarding fa-flip-both"></i>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Animating Icons
-  
-<i class="fas fa-spinner fa-spin fa-3x"></i>
+<i class="fas fa-snowboarding fa-flip-both"></i></p>
+<hr>
+<h1 id="animating-icons">Animating Icons<a hidden class="anchor" aria-hidden="true" href="#animating-icons">#</a></h1>
+<p><i class="fas fa-spinner fa-spin fa-3x"></i>
 <i class="fas fa-circle-notch fa-spin fa-3x"></i>
 <i class="fas fa-sync fa-spin fa-3x"></i>
 <i class="fas fa-cog fa-spin fa-3x"></i>
 <i class="fas fa-spinner fa-pulse fa-3x"></i>
-<i class="fas fa-stroopwafel fa-spin fa-3x"></i>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-#### Bordered + Pulled Icons
-
-<i class="fas fa-quote-left fa-2x fa-pull-left"></i>
-
-Gatsby believed in the green light, the orgastic future that year by year recedes before us.
-It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
-And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.<!-- .element: style="font-size: 24px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify" -->
-
+<i class="fas fa-stroopwafel fa-spin fa-3x"></i></p>
+<hr>
+<h4 id="bordered--pulled-icons">Bordered + Pulled Icons<a hidden class="anchor" aria-hidden="true" href="#bordered--pulled-icons">#</a></h4>
+<p><i class="fas fa-quote-left fa-2x fa-pull-left"></i></p>
+<p>Gatsby believed in the green light, the orgastic future that year by year recedes before us.
+It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further&hellip;
+And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.<!-- .element: style="font-size: 24px" align="justify" --></p>
 <br>
-
-<i class="fas fa-arrow-right fa-2x fa-pull-right fa-border"></i>
-
-Gatsby believed in the green light, the orgastic future that year by year recedes before us.
-It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
-And one fine morning — So we beat on.<!-- .element: style="font-size: 46px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify" -->
-
-[Search v5 Icons | Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-😄 => 😄
-
-[emoji-cheat-sheet/README.md at master · ikatyang/emoji-cheat-sheet · GitHub](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#table-of-contents)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-<canvas style="max-height:700px" data-chart="bar" >
-<!--
-{"data":{"datasets":[{"data":[1,2,3,4,5,6,7,8,9],"label":"Title 1","backgroundColor":"#4285f4"},{"data":[5,4,3,2,1,0,-1,-2,-3],"label":"Title 2","backgroundColor":"#ea4335"}],"labels":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","next Week","next Month"]},"options":{"elements":{"bar":{}}}}-->
-</canvas>
+<p><i class="fas fa-arrow-right fa-2x fa-pull-right fa-border"></i></p>
+<p>Gatsby believed in the green light, the orgastic future that year by year recedes before us.
+It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further&hellip;
+And one fine morning — So we beat on.<!-- .element: style="font-size: 46px" align="justify" --></p>
+<h2 id="search-v5-icons--font-awesomehttpsfontawesomecomv515iconsdgalleryp2mfree"><a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=2&amp;m=free">Search v5 Icons | Font Awesome</a><a hidden class="anchor" aria-hidden="true" href="#search-v5-icons--font-awesomehttpsfontawesomecomv515iconsdgalleryp2mfree">#</a></h2>
+<p>:smile: =&gt; 😄</p>
+<p><a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#table-of-contents">emoji-cheat-sheet/README.md at master · ikatyang/emoji-cheat-sheet · GitHub</a></p>
+<hr>
+<pre tabindex="0"><code class="language-chart" data-lang="chart">    type: bar
+    labels: [Monday,Tuesday,Wednesday,Thursday,Friday, Saturday, Sunday, &#34;next Week&#34;, &#34;next Month&#34;]
+    series:
+      - title: Title 1
+        data: [1,2,3,4,5,6,7,8,9]
+      - title: Title 2
+        data: [5,4,3,2,1,0,-1,-2,-3]
+    ```
 [Types | Obsidian Charts](https://charts.phibr0.de/Chart%20Types/)
-```
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+</code></pre><hr>
 <canvas data-chart="line" >
 <!--
 {
@@ -670,165 +478,214 @@ And one fine morning — So we beat on.<!-- .element: style="font-size: 46px; di
 }
 -->
 </canvas>
-
-[reveal.js-plugins/chart at master · rajgoel/reveal.js-plugins · GitHub](https://github.com/rajgoel/reveal.js-plugins/tree/master/chart#usage)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Title
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
-# Title
-##### **Subtitle**
-###### *Author - 2022* 
-
-[Auto-Animate | reveal.js](https://revealjs.com/auto-animate/)
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<h2 id="revealjs-pluginschart-at-master--rajgoelrevealjs-plugins--githubhttpsgithubcomrajgoelrevealjs-pluginstreemasterchartusage"><a href="https://github.com/rajgoel/reveal.js-plugins/tree/master/chart#usage">reveal.js-plugins/chart at master · rajgoel/reveal.js-plugins · GitHub</a><a hidden class="anchor" aria-hidden="true" href="#revealjs-pluginschart-at-master--rajgoelrevealjs-plugins--githubhttpsgithubcomrajgoelrevealjs-pluginstreemasterchartusage">#</a></h2>
+<!-- .slide: data-auto-animate -->
+<h1 id="title">Title<a hidden class="anchor" aria-hidden="true" href="#title">#</a></h1>
+<hr>
+<!-- .slide: data-auto-animate -->
+<h1 id="title-1">Title<a hidden class="anchor" aria-hidden="true" href="#title-1">#</a></h1>
+<h5 id="subtitle"><strong>Subtitle</strong><a hidden class="anchor" aria-hidden="true" href="#subtitle">#</a></h5>
+<h6 id="author---2022"><em>Author - 2022</em><a hidden class="anchor" aria-hidden="true" href="#author---2022">#</a></h6>
+<p><a href="https://revealjs.com/auto-animate/">Auto-Animate | reveal.js</a></p>
+<hr>
 <split even>
-
-<img src="https://picsum.photos/id/1005/250/250" alt="" style="object-fit: scale-down">
-<img src="https://picsum.photos/id/1010/250/250" alt="" style="object-fit: scale-down">
-<img src="https://picsum.photos/id/1025/250/250" alt="" style="object-fit: scale-down">
-</split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<h2 id="split"><img loading="lazy" src="https://picsum.photos/id/1005/250/250" alt=""  />
+ 
+<img loading="lazy" src="https://picsum.photos/id/1010/250/250" alt=""  />
+ 
+<img loading="lazy" src="https://picsum.photos/id/1025/250/250" alt=""  />
+ 
+</split></h2>
 <split even gap="3">
-
-**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-
-when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-
-into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-</split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s</p>
+<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
+<h2 id="split-1">into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+</split></h2>
 <split left="2" right="1" gap="2">
-
-**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-	
-into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-</split>
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
+<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap</p>
+<h2 id="split-2">into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+</split></h2>
 <split wrap="2">
+<p><img loading="lazy" src="https://picsum.photos/id/1010/250/250" alt=""  />
+</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1011/250/250" alt=""  />
+</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1012/250/250" alt=""  />
+</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1013/250/250" alt=""  />
+</p>
+<p><img loading="lazy" src="https://picsum.photos/id/1014/250/250" alt=""  />
+</p>
+<h2 id="split-3"><img loading="lazy" src="https://picsum.photos/id/1015/250/250" alt=""  />
+ 
+</split></h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>meaningful!&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
-<img src="https://picsum.photos/id/1010/250/250" alt="" style="object-fit: scale-down">
 
-<img src="https://picsum.photos/id/1011/250/250" alt="" style="object-fit: scale-down">
+</div>
 
-<img src="https://picsum.photos/id/1012/250/250" alt="" style="object-fit: scale-down">
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chalkboard With this plugin you can add a chalkboard to reveal.js. The plugin provides two possibilities to include handwritten notes to your presentation:
+you can make notes directly on the slides, e.g. to comment on certain aspects, you can open a chalkboard or whiteboard on which you can make notes. The main use case in mind when implementing the plugin is classroom usage in which you may want to explain some course content and quickly need to make some notes....</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/chalkboard/readme/"></a>
+</article>
 
-<img src="https://picsum.photos/id/1013/250/250" alt="" style="object-fit: scale-down">
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chart A plugin for Reveal.js allowing to easily add charts using Chart.js.
+Check out the live demo
+Installation Copy the file plugin.js into the plugin folder of your reveal.js presentation, i.e. plugin/chart.
+Add the plugin and Chart.js to the dependencies in your presentation, as below.
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;plugin/chart/plugin.js&#34;&gt;&lt;/script&gt; &lt;script&gt; Reveal.initialize({ // ... plugins: [ RevealChart ], // ... }); &lt;/script&gt; Configuration The plugin has several parameters that you can set for your presentation by providing an chart option in the reveal....</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/chart/readme/"></a>
+</article>
 
-<img src="https://picsum.photos/id/1014/250/250" alt="" style="object-fit: scale-down">
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Custom controls This plugin allows to add responsive custom controls to reveal.js which allow arbitrary positioning, layout, and behaviour of the controls.
+Check out the live demo
+Installation Copy the files plugin.js and style.css into the plugin folder of your reveal.js presentation, i.e. plugin/customcontrols and load the plugin as shown below.
+&lt;link rel=&#34;stylesheet&#34; href=&#34;plugin/customcontrols/style.css&#34;&gt; &lt;script src=&#34;plugin/customcontrols/plugin.js&#34;&gt;&lt;/script&gt; &lt;script&gt; Reveal.initialize({ // ... plugins: [ RevealCustomControls ], // ... }); &lt;/script&gt; Note, without configuration you need to add...</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/customcontrols/readme/"></a>
+</article>
 
-<img src="https://picsum.photos/id/1015/250/250" alt="" style="object-fit: scale-down">
-</split>
-</div></script></section></div>
-    </div>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Contributing Bug Reports When reporting a bug make sure to include information about which browser and operating system you are on as well as the necessary steps to reproduce the issue. If possible please include a link to a sample presentation where the bug can be tested.
+Pull Requests Should follow the coding style of the file you work in Should be made towards the dev branch Should be submitted from a feature/topic branch (not your master) </p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/menu/contributing/"></a>
+</article>
 
-    <script src="dist/reveal.js"></script>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>reveal.js-menu A slideout menu plugin for Reveal.js to quickly jump to any slide by title. Also optionally change the theme and set the default transition. Check out the live demo
+Installation Bower Download and install the package in your project:
+bower install reveal.js-menu
+Add the plugin to your presentation, as below.
+&lt;script src=&#34;bower_components/reveal.js-menu/menu.js&#34;&gt;&lt;/script&gt; &lt;script&gt; Reveal.initialize({ plugins: [ RevealMenu ] }); &lt;/script&gt; npm Download and install the package in your project:...</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/menu/readme/"></a>
+</article>
 
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script src="plugin/zoom/zoom.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/math/math.js"></script>
-	<script src="plugin/mermaid/mermaid.js"></script>
-	<script src="plugin/chart/chart.min.js"></script>
-	<script src="plugin/chart/plugin.js"></script>
-	<script src="plugin/customcontrols/plugin.js"></script>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> reveal.js - Speaker View Loading speaker view... Upcoming Time Click to Reset 0:00 AM 00:00:00 Pacing – Time to finish current slide 00:00:00 Notes </p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to " href="/sample/plugin/notes/speaker-view/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
-        return target;
-      }
+    }
 
-	  function isLight(color) {
-		let hex = color.replace('#', '');
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
-		// convert #fff => #ffffff
-		if(hex.length == 3){
-			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
-		}
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-		const c_r = parseInt(hex.substr(0, 2), 16);
-		const c_g = parseInt(hex.substr(2, 2), 16);
-		const c_b = parseInt(hex.substr(4, 2), 16);
-		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
-		return brightness > 155;
-	}
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+</script>
+</body>
 
-	if(isLight(bgColor)){
-		document.body.classList.add('has-light-background');
-	} else {
-		document.body.classList.add('has-dark-background');
-	}
-
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath.MathJax3,
-		  RevealMermaid,
-		  RevealChart,
-		  RevealCustomControls,
-        ],
-
-
-    	allottedTime: 120 * 1000,
-
-		mathjax3: {
-			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
-		},
-		markdown: {
-		  gfm: true,
-		  mangle: true,
-		  pedantic: false,
-		  smartLists: false,
-		  smartypants: false,
-		},
-
-		customcontrols: {
-			controls: [
-			]
-		},
-      };
-
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
-
-      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":true,"transition":"fade","transitionSpeed":"normal"}, queryOptions);
-    </script>
-
-    <script>
-      Reveal.initialize(options);
-    </script>
-  </body>
 </html>
